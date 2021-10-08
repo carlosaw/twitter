@@ -27,7 +27,7 @@
 		
 		<?php foreach($sugestao as $usuario): ?>
 			<tr>
-				 <td width="80%"><a href="/twitter/home/pager/<?php echo $usuario['id']; ?>"><?php echo $usuario['nome']; ?></a></td>
+				 <td width="80%"><?php echo $usuario['nome']; ?></td>
 				<td>
 					<?php if($usuario['seguido'] == '0'): ?>
 						<a href="/twitter/home/seguir/<?php echo $usuario['id']; ?>">Seguir</a>

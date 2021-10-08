@@ -17,7 +17,9 @@ class posts extends model {
 
 		if(count($lista) > 0) {
 
-			$sql = "SELECT *, (select nome from usuarios where usuarios.id = posts.id_usuario) as nome FROM posts WHERE id_usuario IN (".implode(',', $lista).") ORDER BY data_post DESC";
+			$sql = "SELECT *, (select nome from usuarios where usuarios.id = posts.id_usuario) as nome 
+			FROM posts WHERE id_usuario IN (".implode(',', $lista).")
+			ORDER BY data_post DESC LIMIT ".$limit;
 			//echo $sql;exit;
 			$sql = $this->db->query($sql);
 

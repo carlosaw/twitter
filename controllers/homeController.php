@@ -28,7 +28,7 @@ class homeController extends controller {
 		$dados['nome'] = $u->getNome();
 		$dados['qt_seguidos'] = $u->countSeguidos();
 		$dados['qt_seguidores'] = $u->countSeguidores();
-		$dados['sugestao'] = $u->getUsuarios(10);
+		$dados['sugestao'] = $u->getUsuarios(5);
 
 		$lista = $u->getSeguidos();
 		$lista[] = $_SESSION['twlg'];//Adiciona meus feeds na lista
